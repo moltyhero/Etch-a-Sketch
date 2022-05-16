@@ -15,7 +15,12 @@ function createGrid(verticalSquares, horizontalSquares) {
             div.style.height = containerHeight/verticalSquares + "px";
 
             div.addEventListener('mouseover', () => { // Add hover effect to each pixel
-                div.style.backgroundColor = 'yellow';
+
+                div.style.backgroundColor = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)},
+                    ${Math.floor(Math.random() * 256)})`;
+                // let currentBrighness = div.style.filter;
+                // console.log(currentBrighness);
+                // div.style.filter = `brightness(${})`;
             })
     
             mainDiv.appendChild(div);
